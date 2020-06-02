@@ -36,7 +36,10 @@
                 <div class="form-group">
                     <label for="systemCustomer">Klient</label>
                     <form:select path="customer.id" class="form-control" id="systemCustomer">
-                        <form:options items="${customers}" itemValue="id" itemLabel="name"></form:options>
+<%--                        <form:options items="${customers}" itemValue="id" itemLabel="name"></form:options>--%>
+                        <c:forEach items="${customers}" var="theCustomer">
+                            <form:option value="${theCustomer.id}">${theCustomer.name}</form:option>
+                        </c:forEach>
                     </form:select>
                     <br>
                 </div>

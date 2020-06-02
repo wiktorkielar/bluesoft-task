@@ -21,7 +21,7 @@ public class SystemRepositoryImpl implements SystemRepository {
     }
 
     @Override
-    @Transactional
+
     public List<System> getSystems() {
 
         Session session = sessionFactory.getCurrentSession();
