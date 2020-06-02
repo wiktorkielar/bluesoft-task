@@ -1,0 +1,56 @@
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <definition name="template-def"
+                template="/WEB-INF/views/tiles/layouts/defaultLayout.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header"
+                       value="/WEB-INF/views/tiles/templates/defaultHeader.jsp" />
+        <put-attribute name="menu"
+                       value="/WEB-INF/views/tiles/templates/defaultMenu.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer"
+                       value="/WEB-INF/views/tiles/templates/defaultFooter.jsp" />
+    </definition>
+    <definition name="contract-list-def" extends="template-def">
+        <put-attribute name="title" value="Umowy" />
+        <put-attribute name="body"
+                       value="/WEB-INF/views/pages/contract-list.jsp" />
+    </definition>
+    <definition name="contract-add-def" extends="template-def">
+        <put-attribute name="title" value="Dodaj nową umowę" />
+        <put-attribute name="body"
+                       value="/WEB-INF/views/pages/contract-add.jsp" />
+    </definition>
+    <definition name="contract-update-def" extends="template-def">
+        <put-attribute name="title" value="Edytuj umowę" />
+        <put-attribute name="body"
+                       value="/WEB-INF/views/pages/contract-update.jsp" />
+    </definition>
+    <definition name="system-list-def" extends="template-def">
+        <put-attribute name="title" value="Systemy" />
+        <put-attribute name="body"
+                       value="/WEB-INF/views/pages/system-list.jsp" />
+    </definition>
+    <definition name="system-add-def" extends="template-def">
+        <put-attribute name="title" value="Dodaj nowy system" />
+        <put-attribute name="body"
+                       value="/WEB-INF/views/pages/system-add.jsp" />
+    </definition>
+    <definition name="customer-list-def" extends="template-def">
+        <put-attribute name="title" value="Klienci" />
+        <put-attribute name="body"
+                       value="/WEB-INF/views/pages/customer-list.jsp" />
+    </definition>
+    <definition name="customer-add-def" extends="template-def">
+        <put-attribute name="title" value="Dodaj nowego klienta" />
+        <put-attribute name="body"
+                       value="/WEB-INF/views/pages/customer-add.jsp" />
+    </definition>
+    <definition name="about-def" extends="template-def">
+        <put-attribute name="title" value="O aplikacji" />
+        <put-attribute name="body"
+                       value="/WEB-INF/views/pages/about.jsp" />
+    </definition>
+</tiles-definitions>
